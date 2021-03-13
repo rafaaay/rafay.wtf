@@ -12,6 +12,7 @@
   &__logo {
     font-size: 4rem;
     position: relative;
+    cursor: pointer;
 
     &::before,
     &::after {
@@ -106,6 +107,41 @@
         content: ">";
         right: -5rem;
       }
+    }
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  p {
+    font-size: 3rem;
+    word-spacing: 2rem;
+    cursor: pointer;
+
+    &:hover span {
+      text-decoration: line-through;
+    }
+
+    &:hover span:before {
+      opacity: 1;
+    }
+  }
+
+  span {
+    position: relative;
+    transition: all 0.2s;
+
+    &::before {
+      content: "don't love";
+      position: absolute;
+      top: -8rem;
+      color: red;
+      opacity: 0;
+      transition: all 0.2s;
     }
   }
 }

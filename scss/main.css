@@ -70,6 +70,7 @@ body {
 .header__logo {
   font-size: 4rem;
   position: relative;
+  cursor: pointer;
 }
 
 .header__logo::before, .header__logo::after {
@@ -177,5 +178,43 @@ body {
 .banner__description .text::after {
   content: ">";
   right: -5rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.footer p {
+  font-size: 3rem;
+  word-spacing: 2rem;
+  cursor: pointer;
+}
+
+.footer p:hover span {
+  text-decoration: line-through;
+}
+
+.footer p:hover span:before {
+  opacity: 1;
+}
+
+.footer span {
+  position: relative;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.footer span::before {
+  content: "don't love";
+  position: absolute;
+  top: -8rem;
+  color: red;
+  opacity: 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 /*# sourceMappingURL=main.css.map */
