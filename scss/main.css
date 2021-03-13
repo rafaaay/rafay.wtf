@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  background-color: #5cdb95;
+  color: #05386b;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    right: -5rem;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    right: -5rem;
+  }
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 5rem;
+}
+
+.header__logo {
+  font-size: 4rem;
+  position: relative;
+}
+
+.header__logo::before, .header__logo::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #edf5ef;
+}
+
+.header__logo::before {
+  content: "<";
+  left: -3rem;
+}
+
+.header__logo::after {
+  content: ">";
+  right: -3rem;
+  -webkit-animation-name: fadeOut;
+          animation-name: fadeOut;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.header__logo:hover::after {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+.header__link {
+  font-size: 4rem;
+  color: #05386b;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.header__link:hover {
+  color: #379683;
+}
+
+.banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+.banner__title {
+  font-size: 7rem;
+  letter-spacing: 2rem;
+  margin-right: -2rem;
+  position: relative;
+}
+
+.banner__title span {
+  font-size: 4rem;
+  letter-spacing: 1rem;
+  text-align: right;
+  color: #edf5ef;
+  display: block;
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.banner__description .text {
+  font-size: 4rem;
+  color: #edf5ef;
+  position: relative;
+  -webkit-transform: rotate3d(1, 1, 1, -30deg);
+          transform: rotate3d(1, 1, 1, -30deg);
+}
+
+.banner__description .text::before, .banner__description .text::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #05386b;
+}
+
+.banner__description .text::before {
+  content: "<";
+  left: -5rem;
+}
+
+.banner__description .text::after {
+  content: ">";
+  right: -5rem;
+}
+/*# sourceMappingURL=main.css.map */

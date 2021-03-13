@@ -1,0 +1,111 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 5rem;
+
+  &__logo {
+    font-size: 4rem;
+    position: relative;
+
+    &::before,
+    &::after {
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $color-white;
+    }
+
+    &::before {
+      content: "<";
+      left: -3rem;
+    }
+
+    &::after {
+      content: ">";
+      right: -3rem;
+
+      animation-name: fadeOut;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-play-state: paused;
+    }
+
+    &:hover::after {
+      animation-play-state: running;
+    }
+  }
+
+  &__link {
+    font-size: 4rem;
+    color: $color-blue-dark;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $color-blue-light;
+    }
+  }
+}
+
+.banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+
+  &__title {
+    font-size: 7rem;
+    letter-spacing: 2rem;
+    margin-right: -2rem;
+    position: relative;
+
+    span {
+      font-size: 4rem;
+      letter-spacing: 1rem;
+      text-align: right;
+      color: $color-white;
+      display: block;
+      animation-name: fade;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+  }
+
+  &__description {
+    .text {
+      font-size: 4rem;
+      color: $color-white;
+      position: relative;
+      transform: rotate3d(1, 1, 1, -30deg);
+
+      &::before,
+      &::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $color-blue-dark;
+      }
+
+      &::before {
+        content: "<";
+        left: -5rem;
+      }
+
+      &::after {
+        content: ">";
+        right: -5rem;
+      }
+    }
+  }
+}
