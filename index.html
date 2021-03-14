@@ -6,36 +6,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="scss/main.css">
 
-  <title>Rafay</title>
+  <title>Card - JS Animation</title>
 </head>
 <body>
   <div class="container">
-    
-    <header class="header">
-      <h2 class="header__logo">R</h2>
-      <a href="https://github.com/rafaaay" class="header__link"><i class="fa fa-github" aria-hidden="true"></i></a>
-    </header>
+    <div class="card">
 
-    <section class="banner">
-      <div class="banner__title">
-        <h1>Rafay</h1>
-        <span>.wtf</span>
+      <div class="card__img">
+        <div class="circle"></div>
+        <img src="adidas.png" alt="adidas">
       </div>
 
-      <div class="banner__description">
-        <p class="text">Front End Developer</p>
-      </div>
-    </section>
+      <div class="card__info">
+        <h1 class="card__title">Adidas ZX</h1>
+        <h3 class="card__description">future-ready trainers with wrapped boost for exceptional comfort.</h3>
 
-    <footer class="footer">
-      <p>I <span>love</span> ShopDev</p>
-    </footer>
+        <div class="card__sizes">
+          <button class="button">39</button>
+          <button class="button">40</button>
+          <button class="button active">41</button>
+          <button class="button">42</button>
+        </div>
+
+        <div class="card__purchase">
+          <button class="purchase">Purchase</button>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <script src="app.js"></script>
 </body>
 </html>

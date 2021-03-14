@@ -1,4 +1,118 @@
-@import "_variables.scss";
-@import "_base.scss";
-@import "_abstract.scss";
-@import "_page.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 100rem;
+}
+
+.container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  min-height: 80vh;
+  width: 56rem;
+  border-radius: 3rem;
+  padding: 0 8rem;
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.2), 0 0 5rem rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+
+  // Image
+  &__img {
+    min-height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .circle {
+      height: 24rem;
+      width: 24rem;
+      background: linear-gradient(
+        to right,
+        rgba(245, 70, 66, 0.75),
+        rgba(8, 83, 156, 0.75)
+      );
+      border-radius: 50%;
+      z-index: 1;
+      position: absolute;
+    }
+
+    img {
+      width: 32rem;
+      z-index: 2;
+      transition: all 0.75s ease-out;
+    }
+  }
+
+  // Info
+  &__info {
+    h1 {
+      font-size: 4.8rem;
+      transition: all 0.75s ease-out;
+    }
+
+    h3 {
+      font-size: 2.08rem;
+      padding: 3.2rem 0;
+      color: #585858;
+      font-weight: lighter;
+      text-transform: uppercase;
+      transition: all 0.75s ease-out;
+    }
+  }
+
+  // Sizes
+  &__sizes {
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.75s ease-out;
+
+    .button {
+      padding: 0.8rem 3.2rem;
+      background: none;
+      border: none;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+      border-radius: 3rem;
+      cursor: pointer;
+      font-weight: bold;
+      color: #585858;
+
+      &.active {
+        background: #585858;
+        color: white;
+      }
+    }
+  }
+
+  // Purchase
+  &__purchase {
+    margin-top: 8rem;
+
+    .purchase {
+      width: 100%;
+      padding: 1.6rem 0;
+      background: #f54642;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-weight: bolder;
+      border-radius: 3rem;
+      transition: all 0.75s ease-out;
+    }
+  }
+}
